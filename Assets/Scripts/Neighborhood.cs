@@ -10,7 +10,10 @@ public class Neighborhood : MonoBehaviour
     void Start()
     {
         neighbors = new List<Boid>();
+        coll = GetComponent<SphereCollider>();
         coll.radius = Spawner.S.neighborDist / 2;
+        
+        
     }
     private void FixedUpdate()
     {
